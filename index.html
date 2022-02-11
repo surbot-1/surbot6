@@ -29,10 +29,59 @@
  
  
  
- 
- 
- 
+  <script src=
 
+"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+
+    </script>
+  
+      <div id="root"<\div>
+ 
+  <script>
+ 
+ const firebaseConfig = {
+  apiKey: "AIzaSyCmNVaTr8sTKQVSqZprpBK-AMTpUsNPUGs",
+  authDomain: "surbot-v1-1.firebaseapp.com",
+  databaseURL: "https://surbot-v1-1-default-rtdb.firebaseio.com",
+  projectId: "surbot-v1-1",
+  storageBucket: "surbot-v1-1.appspot.com",
+  messagingSenderId: "702504911981",
+  appId: "1:702504911981:web:6d1fea970a851c7ff3ab64"
+};
+ 
+      firebase.initializeApp(firebaseConfig);
+ 
+      var dataref = firebase.database()
+
+            .ref('Data');
+ 
+     // var dataref2 = firebase.database()
+
+           // .ref('Data2');
+   
+      var data1 = getInputVal('data1');
+
+      var data2 = getInputVal('data2');
+   
+ 
+     function saveMessage(name, email) {
+
+          //  var newMessageRef = messagesRef.push();
+
+             dataref.set({
+
+                Data1: data1,
+
+                Data2: data2,
+
+            });
+
+        }
+   
+
+    </script>
+ 
+ 
 </body>
 
 </html>
